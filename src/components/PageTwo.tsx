@@ -14,7 +14,7 @@ const PageTwo = () => {
       <div className="max-w-[1440px] mx-auto">
 
         {/* Top Label */}
-        <div className="flex items-center gap-4 mb-8 mt-24">
+        <div className="flex items-center gap-4 mb-8 mt-20">
           <span className="inline-flex items-center px-4 py-1 rounded-full bg-surface-container-highest text-primary font-label text-[10px] tracking-widest uppercase font-bold">
             <span className="w-1.5 h-1.5 bg-primary rounded-full mr-2" />
             Knowledge Hub
@@ -78,12 +78,12 @@ const PageTwo = () => {
               title="Beyond the Screen: Multi-modal experiences in high-end retail."
             />
 
-            <ArticleItem
+            {/* <ArticleItem
               category="Visual Culture"
               date="02.22.2024"
               title="Typography as Architecture: Structural font usage in modern UI."
               noBorder
-            />
+            /> */}
 
           </div>
         </div>

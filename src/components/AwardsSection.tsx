@@ -9,13 +9,13 @@ function AwardsSection() {
     <main className="pt-2 min-h-screen">
 
       {/* HERO */}
-      <div className="max-w-[1440px] px-2 mx-auto mb-24 mt-24">
+      <div className="px-10 max-w-screen-2xl mx-auto mb-24 mt-24">
   
   <div className="relative overflow-hidden rounded-xl p-12 md:p-20 text-on-primary shadow-2xl flex flex-col md:flex-row items-center justify-between gap-12">
     
     <div className="relative z-10 max-w-2xl">
 
-      <span className="inline-flex items-center gap-2 px-3 py-1 bg-white/20 rounded-full text-xs font-bold tracking-widest uppercase mb-6 backdrop-blur-md">
+      <span className="inline-flex items-center gap-2 py-1 bg-white/20 rounded-full text-xs font-bold tracking-widest uppercase mb-6 backdrop-blur-md">
         <span className="w-2 h-2 rounded-full bg-white"></span>
         Latest Achievement
       </span>
@@ -58,7 +58,7 @@ function AwardsSection() {
 </div>
 
       {/* GRID */}
-      <section className="max-w-[1440px] mx-auto px-8 pb-32">
+      <section className="px-10 max-w-screen-2xl mx-auto pb-16">
 
         <div className="flex justify-between items-end mb-20">
           <div>
@@ -139,8 +139,8 @@ function AwardsSection() {
       </section>
 
       {/* STATS */}
-      <div className="max-w-[1440px] mx-auto px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-16 border-y">
+      <div className="px-10 max-w-screen-2xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-16 border-b">
 
           <Stat number="15+" label="Global Awards" />
           <Stat number="4.9/5" label="Clutch Rating" />

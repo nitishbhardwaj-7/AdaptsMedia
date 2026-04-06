@@ -5,6 +5,7 @@ import PlatformCard from "./Cards/PlatformCard";
 import MeasureCard from "./Cards/MeasureCard";
 import TalentNetwork from "./TalentNetwork";
 import MeasurementAnalytics from "./MeasurementAnalysis";
+import CTASection from "./CTASection";
 
 function PageSix() {
     const talentLogos = [
@@ -72,7 +73,7 @@ const measurementLogos = [
             </h2>
 
             <p className="opacity-70 mb-8">
-              Tier one partnerships with global platforms.
+              Backed by strategic partnerships with leading global platforms, we craft data-driven social media ecosystems that amplify reach, accelerate engagement, and convert attention into scalable revenue. From paid acquisition to organic storytelling, every interaction is engineered for performance.
             </p>
 
             <div className="p-6 border-l-4 border-primary bg-gray-100 rounded-xl">
@@ -98,27 +99,7 @@ const measurementLogos = [
         
 
         {/* CTA */}
-        <section className="py-24 text-center bg-surface-container-low rounded-[3rem] relative overflow-hidden group">
-  
-  <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none group-hover:rotate-12 transition-transform duration-700">
-    <span className="material-symbols-outlined text-[12rem]">
-      hub
-    </span>
-  </div>
-
-  <div className="relative z-10">
-    
-    <h3 className="font-headline font-black text-4xl mb-8">
-      READY TO PLUG IN?
-    </h3>
-
-    <button className="bg-primary hover:bg-primary-container text-on-primary px-12 py-5 rounded-full font-label font-bold tracking-widest text-sm transition-all shadow-xl shadow-primary/20 scale-100 active:scale-95">
-      REQUEST ACCESS
-    </button>
-
-  </div>
-
-</section>
+        <CTASection/>
       </div>
     </main>
   );

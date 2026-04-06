@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <footer className="w-full pt-24 pb-12 bg-[#1c1b1b] text-white">
-  <div className="max-w-7xl mx-auto px-12">
+  <div className="px-6 max-w-screen-2xl mx-auto">
 
     {/* Footer Branding & Main Grid */}
     <div className="mb-20">
@@ -126,14 +126,14 @@ const Footer = () => {
 
       <div className="flex flex-col gap-2">
         <p className="text-white/40 text-xs font-manrope">
-          ADAPTS MEDIA. All rights reserved. Built with Motion.
+          ADAPTS MEDIA. All rights reserved.
         </p>
 
         <div className="flex gap-4 items-center opacity-40">
-          <span className="text-[10px] border border-white/30 px-2 py-0.5 rounded">
+          <span className="text-[10px] border text-white border-white/30 px-2 py-0.5 rounded">
             DMCA PROTECTED
           </span>
-          <span className="text-[10px] border border-white/30 px-2 py-0.5 rounded">
+          <span className="text-[10px] border text-white border-white/30 px-2 py-0.5 rounded">
             GDPR COMPLIANT
           </span>
         </div>
@@ -142,19 +142,19 @@ const Footer = () => {
       {/* Social Icons */}
       <div className="flex gap-6">
 
-        <a className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300 group" href="#">
+        <a className="w-10 h-10 rounded-full bg-white/90 flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300 group" href="#">
           <span className="material-symbols-outlined text-sm group-hover:text-white">share</span>
         </a>
 
-        <a className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300 group" href="#">
+        <a className="w-10 h-10 rounded-full bg-white/90 flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300 group" href="#">
           <span className="material-symbols-outlined text-sm group-hover:text-white">public</span>
         </a>
 
-        <a className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300 group" href="#">
+        <a className="w-10 h-10 rounded-full bg-white/90 flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300 group" href="#">
           <span className="material-symbols-outlined text-sm group-hover:text-white">alternate_email</span>
         </a>
 
-        <a className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300 group" href="#">
+        <a className="w-10 h-10 rounded-full bg-white/90 flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300 group" href="#">
           <span className="material-symbols-outlined text-sm group-hover:text-white">data_thresholding</span>
         </a>
 

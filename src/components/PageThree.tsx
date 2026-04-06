@@ -5,14 +5,15 @@ function PageThree() {
 
   return (
     <div
-      id="page3"
+      id="page-3"
       
       className="relative h-screen w-full overflow-hidden"
     >
       {/* Video */}
       <video
        
-        src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+        src="https://www.pexels.com/download/video/6930347/"
+        autoPlay
         muted
         loop
         playsInline

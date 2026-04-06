@@ -18,115 +18,101 @@ function Navbar() {
         {/* Nav Links */}
         <div className="hidden md:flex gap-10">
 
-          {/* Expertise */}
-          <div className="nav-item relative py-2 group">
-            
-            <button className="nav-link-3d text-[#0050cb] dark:text-[#0066ff] font-bold border-b-2 border-[#0050cb] pb-1 flex items-center gap-1">
-              Expertise
-              <span className="material-symbols-outlined text-sm">
-                keyboard_arrow_down
-              </span>
-            </button>
-
-            {/* Mega Menu */}
-            <div className="mega-menu absolute top-full -left-48 w-[800px] mt-4 p-8 rounded-xl bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0px_32px_64px_rgba(0,0,0,0.08)] border border-outline-variant/15 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-
-              <div className="grid grid-cols-12 gap-8">
-
-                {/* Left */}
-                <div className="col-span-7 space-y-6">
-
-                  <span className="text-label-md font-bold uppercase tracking-widest text-primary opacity-60 block mb-6">
-                    Core Services
-                  </span>
-
-                  {/* Item */}
-                  <div className="flex gap-4 p-3 rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer">
-                    <div className="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
-                      <span className="material-symbols-outlined">search</span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-lg">SEO</h4>
-                      <p className="text-sm opacity-70">
-                        Dominate search rankings with optimization.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4 p-3 rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer">
-                    <div className="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
-                      <span className="material-symbols-outlined">ads_click</span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-lg">Paid Ads</h4>
-                      <p className="text-sm opacity-70">
-                        High-intent PPC campaigns.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4 p-3 rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer">
-                    <div className="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
-                      <span className="material-symbols-outlined">share</span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-lg">Social Content</h4>
-                      <p className="text-sm opacity-70">
-                        Viral creative production strategy.
-                      </p>
-                    </div>
-                  </div>
-
-                </div>
-
-                {/* Right */}
-                <div className="col-span-5 flex flex-col gap-8 border-l pl-8">
-
-                  {/* Case Study */}
-                  <div className="relative aspect-video overflow-hidden rounded-lg group cursor-pointer">
-                    <img
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_bayuHp1NN4KDSmQMair4_78Um_1ZrUYetzJh8Fdn0BrQQvqAgeyK3gHQZAagyUUaNbDf2tH6zTlcGhL7mO9UsWqLAmwRxguUSibMyUwvRZ_s4WrRIG2gLAeP241Xm4ZnsLZBswon96WMUmdMb-C3gWNhhP5SPBkjRIqAgnJU9i1kRrvFsY-C1J9hetxR2chYma9tfY4ouiv5TcrcFwwzYapyb1ysdu1RTYM9iilI3FtgbkIQjZPwDMcT0ovA-nvaXheBjeZlpmc"
-                      className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-                    />
-
-                    <div className="absolute bottom-0 p-4 bg-gradient-to-t from-black/70 text-white">
-                      <h5 className="text-sm font-bold">
-                        TechNova: 300% Growth
-                      </h5>
-                    </div>
-                  </div>
-
-                  {/* CTA */}
-                  <div className="bg-primary/5 p-6 rounded-xl border">
-                    <h4 className="font-bold mb-2">Ready to Scale?</h4>
-                    <p className="text-sm opacity-70 mb-3">
-                      Get analysis of your digital footprint.
-                    </p>
-                    <a className="text-primary font-bold flex items-center gap-2">
-                      Growth Audit
-                      <span className="material-symbols-outlined">
-                        trending_up
-                      </span>
-                    </a>
-                  </div>
-
-                </div>
-
-              </div>
-            </div>
-          </div>
+          <NavBarLink
+  title="Expertise"
+  sectionLabel="What We Do Best"
+  services={[
+    { 
+      icon: "search", 
+      title: "SEO Optimization", 
+      description: "Boost organic rankings with technical SEO, keyword strategy, and content optimization.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+    },
+    { 
+      icon: "ads_click", 
+      title: "Performance Marketing", 
+      description: "Data-driven paid campaigns across Google, Meta, and other platforms.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f"
+    },
+    { 
+      icon: "code", 
+      title: "Web Development", 
+      description: "Fast, scalable, and SEO-friendly websites built with modern frameworks.",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+    },
+    { 
+      icon: "insights", 
+      title: "Analytics & Tracking", 
+      description: "Set up GA4, conversion tracking, and dashboards to measure performance.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+    },
+    { 
+      icon: "design_services", 
+      title: "UI/UX Design", 
+      description: "User-focused designs that improve engagement and conversions.",
+      image: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e"
+    },
+    { 
+      icon: "speed", 
+      title: "Website Performance", 
+      description: "Optimize speed, Core Web Vitals, and overall site performance.",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475"
+    },
+  ]}
+  caseStudyImage="https://images.unsplash.com/photo-1707157281599-d155d1da5b4c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  caseStudyTitle="E-commerce Brand: 3X Revenue Growth"
+  ctaTitle="Explore Our Expertise"
+  ctaDescription="See how we help businesses scale with data-driven strategies."
+  ctaLinkText="View Services"
+/>
 
          {/* Expertise */}
-          <NavBarLink
+         <NavBarLink
   title="Case Studies"
   sectionLabel="Recent Work"
   services={[
-    { icon: "work", title: "Branding", description: "Full brand identity systems." },
-    { icon: "campaign", title: "Campaigns", description: "End-to-end campaign execution." },
+    {
+      icon: "trending_up",
+      title: "SaaS Growth Campaign",
+      description: "Scaled a SaaS brand to 4X qualified leads using SEO + paid acquisition.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+    },
+    {
+      icon: "shopping_cart",
+      title: "E-commerce Scaling",
+      description: "Increased revenue by 3X with performance marketing and CRO optimization.",
+      image: "https://images.unsplash.com/photo-1515169067865-5387ec356754"
+    },
+    {
+      icon: "language",
+      title: "SEO Traffic Boost",
+      description: "Achieved 200% organic growth with technical SEO and content strategy.",
+      image: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07"
+    },
+    {
+      icon: "public",
+      title: "Global Brand Launch",
+      description: "Executed multi-channel campaigns for an international product launch.",
+      image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
+    },
+    {
+      icon: "devices",
+      title: "Website Revamp",
+      description: "Redesigned and developed a high-converting website with modern UX.",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+    },
+    {
+      icon: "insights",
+      title: "Conversion Optimization",
+      description: "Improved conversion rates by 65% through funnel and UX improvements.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+    },
   ]}
-  ctaTitle="See All Work"
-  ctaDescription="Browse our full portfolio."
-  ctaLinkText="View Portfolio"
+  caseStudyImage="https://plus.unsplash.com/premium_photo-1681487729805-91f220c7da25?q=80&w=1418&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  caseStudyTitle="Fintech Startup: 5X User Growth in 6 Months"
+  ctaTitle="Explore Case Studies"
+  ctaDescription="See how we deliver measurable results across industries."
+  ctaLinkText="View All Case Studies"
 />
 
           {/* Expertise */}
@@ -180,7 +166,7 @@ function Navbar() {
       description: "Turn visitors into customers with optimized landing pages and funnels." 
     },
   ]}
-  caseStudyImage="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+  caseStudyImage="https://images.unsplash.com/photo-1516383274235-5f42d6c6426d?q=80&w=1474&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   caseStudyTitle="SaaS Brand: 4X Qualified Leads"
   ctaTitle="Ready to Grow?"
   ctaDescription="Get a free SEO & lead generation audit for your business."
@@ -195,22 +181,45 @@ function Navbar() {
     { 
       icon: "trending_up", 
       title: "Demand Generation", 
-      description: "Data-driven campaigns to drive qualified leads and pipeline growth." 
+      description: "Multi-channel campaigns designed to generate high-quality leads and pipeline growth.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+    },
+    { 
+      icon: "ads_click", 
+      title: "Performance Marketing", 
+      description: "ROI-focused paid campaigns across Google, Meta, and programmatic platforms.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f"
     },
     { 
       icon: "insights", 
       title: "Revenue Analytics", 
-      description: "Track, measure, and optimize marketing impact on revenue." 
+      description: "Advanced tracking, attribution models, and dashboards to measure revenue impact.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71"
     },
     { 
       icon: "hub", 
       title: "Lifecycle Marketing", 
-      description: "Engage prospects across the funnel to maximize conversions and retention." 
+      description: "Nurture leads across the funnel with email, automation, and retention strategies.",
+      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+    },
+    { 
+      icon: "filter_alt", 
+      title: "Conversion Rate Optimization", 
+      description: "Optimize landing pages and funnels to increase conversions and reduce drop-offs.",
+      image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
+    },
+    { 
+      icon: "groups", 
+      title: "Customer Acquisition Strategy", 
+      description: "Build scalable acquisition systems tailored to your ideal customer profile.",
+      image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4"
     },
   ]}
-  ctaTitle="Explore Revenue Growth"
-  ctaDescription="See how we help businesses scale predictable revenue."
-  ctaLinkText="View Case Studies"
+  caseStudyImage="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+  caseStudyTitle="B2B SaaS: Pipeline Growth in 90 Days"
+  ctaTitle="Drive Predictable Revenue"
+  ctaDescription="Discover how our revenue marketing strategies turn growth into measurable results."
+  ctaLinkText="Explore Strategies"
 />
 
  <NavBarLink

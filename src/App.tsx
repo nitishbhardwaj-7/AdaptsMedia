@@ -32,7 +32,7 @@ useEffect(() => {
 
   return (
     <main>
-      <nav className="px-2 max-w-screen-2xl">
+      <nav className="px-6 max-w-screen-2xl mx-auto">
         <Navbar/>
       </nav>
   <div>
