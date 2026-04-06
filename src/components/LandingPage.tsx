@@ -1,4 +1,4 @@
-import React from 'react'
+
 import LandingPageCarousel from './Cards/LandingPageCarousel'
 
 const LandingPage = () => {

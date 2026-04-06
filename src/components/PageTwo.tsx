@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Avatar from './Avatar'
 import ArticleItem from './ArticleItem'
 import FeaturedArticle from './FeaturedArticle'

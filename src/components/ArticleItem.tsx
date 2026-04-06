@@ -1,7 +1,15 @@
-import React from 'react'
+
 import ArrowIcon from './ArrowIcon'
 
-const ArticleItem = ({ category, date, title, noBorder }) => {
+type ArticleItemProps = {
+  category: string;
+  date: string;
+  title: string;
+  noBorder?: boolean;
+};
+
+
+const ArticleItem = ({ category, date, title, noBorder }: ArticleItemProps) => {
   return (
     <a className="group block py-10 transition-all duration-300" href="#">
       <div className="flex justify-between items-start gap-6">

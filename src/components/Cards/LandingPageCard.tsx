@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 const LandingPageCard = ({icon, title, desc, highlight}) => {
   return (

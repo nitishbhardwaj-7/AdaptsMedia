@@ -1,5 +1,5 @@
 import { useEffect} from "react";
-import React from 'react'
+
 import Navbar from './components/layout/NavBar'
 import LandingPage from './components/LandingPage'
 import PageTwo from './components/PageTwo'
