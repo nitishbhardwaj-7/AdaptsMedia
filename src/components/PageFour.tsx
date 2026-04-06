@@ -72,7 +72,7 @@ const PageFour = () => {
               <div className="bg-surface/40 p-12 flex justify-between hover:bg-surface/60 transition-colors">
                 <div className='flex flex-col gap-2'>
                   <h4 className="text-6xl font-extrabold">1,500+</h4>
-                  <p className="text-lg uppercase">Global Projects Executed</p>
+                  <p className="text-lg uppercase text-gray-500">Global Projects Executed</p>
                 </div>
                 <span className="material-symbols-outlined text-[#0066FF] text-3xl">
                   rocket_launch
@@ -83,7 +83,7 @@ const PageFour = () => {
               <div className="bg-surface/40 p-12 flex justify-between hover:bg-surface/60 transition-colors">
                 <div className='flex flex-col gap-2'>
                   <h4 className="text-6xl font-extrabold">25+</h4>
-                  <p className="text-lg uppercase">Tier-1 Markets Reached</p>
+                  <p className="text-lg uppercase text-gray-500">Tier-1 Markets Reached</p>
                 </div>
                 <span className="material-symbols-outlined text-[#0066FF] text-3xl">
                   public
@@ -93,7 +93,7 @@ const PageFour = () => {
               {/* Clients */}
               <div className="bg-surface/40 p-12 hover:bg-surface/60 transition-colors">
                 <h4 className="text-6xl font-extrabold mb-2">70+</h4>
-                <p className="text-lg uppercase mb-6">Strategic Client Partnerships</p>
+                <p className="text-lg uppercase mb-6 text-gray-500">Strategic Client Partnerships</p>
 
                 <div className="flex -space-x-3">
                   <img className="w-10 h-10 rounded-full" src="https://randomuser.me/api/portraits/men/32.jpg" />
