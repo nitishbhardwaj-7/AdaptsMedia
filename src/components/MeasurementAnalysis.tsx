@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const logos = [
   "https://img.icons8.com/color/96/salesforce.png",

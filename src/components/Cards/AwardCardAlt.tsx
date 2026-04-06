@@ -1,4 +1,4 @@
-function AwardCardAlt({ img, title, tag, desc, badge, offset }) {
+function AwardCardAlt({ img, title, tag, desc, badge, offset } : { img: string; title: string; tag: string; desc: string; badge: string; offset: string }) {
   return (
     <div
       className={`glass-card p-10 flex flex-col items-center text-center rounded-xl border border-outline-variant/15 ${

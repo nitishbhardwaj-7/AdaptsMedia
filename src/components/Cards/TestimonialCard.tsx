@@ -1,4 +1,18 @@
-function TestimonialCard({ name, role, text, stat, large }) {
+type TestimonialCardProps = {
+  name: string;
+  role: string;
+  text: string;
+  stat?: string;
+  large?: boolean;
+};
+
+function TestimonialCard({
+  name,
+  role,
+  text,
+  stat,
+  large,
+}: TestimonialCardProps) {
   return (
     <div
       className={`glass-card p-10 rounded-xl ${

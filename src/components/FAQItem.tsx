@@ -1,7 +1,18 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-const FAQItem = ({ question, answer, defaultOpen = false }) => {
+type FAQItemProps = {
+  question: string;
+  answer: string;
+  defaultOpen?: boolean;
+};
+
+const FAQItem = ({
+  question,
+  answer,
+  defaultOpen = false,
+}: FAQItemProps) => {
   const [open, setOpen] = useState(defaultOpen);
+
 
   return (
     <div

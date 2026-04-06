@@ -1,6 +1,10 @@
+type StatCardProps = {
+  icon: string;
+  value: string | number;
+  label: string;
+};
 
-
-const StatCard = ({icon , value , label}) => {
+const StatCard = ({ icon, value, label }: StatCardProps) => {
   return (
      <div className="glass-card p-10 flex items-center gap-8">
       <span className="material-symbols-outlined text-primary text-3xl">

@@ -1,4 +1,9 @@
-function PlatformCard({ src, name }) {
+type PlatformCardProps = {
+  src: string;
+  name: string;
+};
+
+function PlatformCard({ src, name }: PlatformCardProps) {
   return (
     <div className="glass-card p-20 rounded-2xl flex flex-col items-center gap-4 text-center">
       <img src={src} className="h-16" />

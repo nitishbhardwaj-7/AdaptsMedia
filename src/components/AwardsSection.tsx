@@ -1,4 +1,4 @@
-import React from "react";
+
 import AwardCard from "./Cards/AwardCard";
 
 import Stat from "./Stat";
@@ -95,6 +95,7 @@ function AwardsSection() {
             tag="UpCity"
             desc='Excellence In Starategic Execution'
             offset=""
+            badge=""
             
           />
 
@@ -104,6 +105,7 @@ function AwardsSection() {
             tag="DesignRush"
             offset=""
             desc='Global Top 10 Agency'
+            badge=""
           />
 
           {/* BIG CARD */}

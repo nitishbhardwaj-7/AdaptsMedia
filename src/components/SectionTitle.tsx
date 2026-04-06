@@ -1,6 +1,8 @@
+type SectionTitleProps = {
+  title: string;
+};
 
-
-const SectionTitle = ({title}) => {
+const SectionTitle = ({ title }: SectionTitleProps) => {
   return (
     <div>
         <div className="flex items-center gap-4 mb-12">

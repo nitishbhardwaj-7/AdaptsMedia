@@ -1,4 +1,4 @@
-import React from "react";
+
 import LogoItem from "./LogoItem";
 
 function PageFive() {

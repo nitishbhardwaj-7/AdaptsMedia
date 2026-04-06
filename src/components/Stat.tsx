@@ -1,4 +1,9 @@
-function Stat({ number, label }) {
+type StatProps = {
+  number: string | number;
+  label: string;
+};
+
+function Stat({ number, label }: StatProps) {
   return (
     <div className="text-center">
       <div className="text-4xl font-bold text-primary">{number}</div>

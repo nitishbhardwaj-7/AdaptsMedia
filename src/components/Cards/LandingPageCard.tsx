@@ -1,6 +1,6 @@
 
 
-const LandingPageCard = ({icon, title, desc, highlight}) => {
+const LandingPageCard = ({icon, title, desc, highlight} :{ icon: string; title: string; desc: string; highlight?: boolean }) => {
   return (
     <div
       className={`glass-card p-12 group transition-all duration-500 flex flex-col justify-between aspect-[4/5]

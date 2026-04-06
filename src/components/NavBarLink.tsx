@@ -1,19 +1,31 @@
-const NavBarLink = ({
-  title,
-  sectionLabel = "Core Services",
-  services,
-  caseStudyImage,
-  caseStudyTitle,
-  ctaTitle = "Ready to Scale?",
-  ctaDescription = "Get analysis of your digital footprint.",
-  ctaLinkText = "Growth Audit",
-}) => {
-  type Service = {
+type Service = {
   icon: string;
   title: string;
   description: string;
+  image?: string; 
 };
 
+type NavBarLinkProps = {
+  title: string;
+  sectionLabel: string;
+  services: Service[];
+  caseStudyImage: string;
+  caseStudyTitle: string;
+  ctaTitle: string;
+  ctaDescription: string;
+  ctaLinkText: string;
+};
+
+const NavBarLink = ({
+  title,
+  sectionLabel,
+  services,
+  caseStudyImage,
+  caseStudyTitle,
+  ctaTitle,
+  ctaDescription,
+  ctaLinkText,
+}: NavBarLinkProps) => {
   return (
     <div className="nav-item relative py-2 group">
       

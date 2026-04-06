@@ -1,4 +1,4 @@
-function AwardCard({ img, title, tag }) {
+function AwardCard({ img, title, tag }: { img: string; title: string; tag: string }) {
   return (
     <div className="glass-card p-10 flex flex-col items-center text-center rounded-xl border border-outline-variant/15">
       

@@ -1,5 +1,8 @@
+type LogoItemProps = {
+  src: string;
+};
 
-const LogoItem = ({src}) => {
+const LogoItem = ({ src }: LogoItemProps) => {
   return (
     <div className="marquee-item">
       <img src={src} alt="brand" />
