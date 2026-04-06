@@ -1,24 +1,23 @@
 import React from "react";
-import SectionTitle from "./SectionTitle";
-import LogoCard from "./Cards/LogoCard";
+
 import PlatformCard from "./Cards/PlatformCard";
-import MeasureCard from "./Cards/MeasureCard";
+
 import TalentNetwork from "./TalentNetwork";
 import MeasurementAnalytics from "./MeasurementAnalysis";
 import CTASection from "./CTASection";
 
 function PageSix() {
-    const talentLogos = [
-  {
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
-  },
-  {
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg",
-  },
-  {
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/instagram/instagram-original.svg",
-  },
-];
+//     const talentLogos = [
+//   {
+//     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
+//   },
+//   {
+//     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg",
+//   },
+//   {
+//     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/instagram/instagram-original.svg",
+//   },
+// ];
 
 const platforms = [
   { src: "/src/assets/tik-tok.png", name: "TIKTOK" },
@@ -29,11 +28,11 @@ const platforms = [
   { src: "/src/assets/pinterest.png", name: "Pinterest" }
 ];
 
-const measurementLogos = [
-  "logoA.png",
-  "logoB.png",
-  "logoC.png",
-];
+// const measurementLogos = [
+//   "logoA.png",
+//   "logoB.png",
+//   "logoC.png",
+// ];
   return (
     <main className="pb-6 relative overflow-hidden bg-grid">
 

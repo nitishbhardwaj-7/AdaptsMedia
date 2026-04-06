@@ -1,4 +1,4 @@
-import { useEffect , useRef } from "react";
+import { useEffect} from "react";
 import React from 'react'
 import Navbar from './components/layout/NavBar'
 import LandingPage from './components/LandingPage'
@@ -19,7 +19,7 @@ const App = () => {
 useEffect(() => {
   const lenis = new Lenis();
 
-  const ticker = (time) => lenis.raf(time * 1000);
+  const ticker = (time: number) => lenis.raf(time * 1000);
   gsap.ticker.add(ticker);
   gsap.ticker.lagSmoothing(0);
 

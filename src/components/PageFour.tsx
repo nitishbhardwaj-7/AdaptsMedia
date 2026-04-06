@@ -1,6 +1,5 @@
 import React from 'react'
-import StatCard from './Cards/StatCard'
-import Avatar from './Avatar'
+
 
 const PageFour = () => {
   return (

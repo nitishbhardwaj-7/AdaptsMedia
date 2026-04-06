@@ -68,6 +68,7 @@ const PageTwo = () => {
               category="Future Tech"
               date="04.12.2024"
               title="How to Design An AI Interface Users will Trust in 2026?"
+              noBorder=""
             />
 
             <FeaturedArticle />
@@ -76,6 +77,7 @@ const PageTwo = () => {
               category="Industry News"
               date="03.15.2024"
               title="Beyond the Screen: Multi-modal experiences in high-end retail."
+              noBorder=""
             />
 
             {/* <ArticleItem

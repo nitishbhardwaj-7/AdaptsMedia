@@ -1,6 +1,6 @@
 import React from "react";
 import AwardCard from "./Cards/AwardCard";
-import StatCard from "./Cards/StatCard";
+
 import Stat from "./Stat";
 import AwardCardAlt from "./Cards/AwardCardAlt";
 
@@ -85,6 +85,8 @@ function AwardsSection() {
             title="Most Creative Performance"
             tag="Sortlist Verified"
             badge="Verified Partner"
+            desc=""
+            offset=""
           />
 
           <AwardCardAlt
@@ -92,6 +94,7 @@ function AwardsSection() {
             title="Local Excellence Winner"
             tag="UpCity"
             desc='Excellence In Starategic Execution'
+            offset=""
             
           />
 
@@ -99,6 +102,7 @@ function AwardsSection() {
             img="https://lh3.googleusercontent.com/aida-public/AB6AXuDNWtPiUmRB3C69eLGNJiIlEok1hYlvbnF1ZFvbhL9ZJwJ9zq_5BV6XQaULMfzRpcX53SSJU1tzNPdlVbu4U3js5XWVTrITezXnWTDgJ2dT7xDEvl2IzYHS4gLbIhZV7DrMl7aNqh6gh05pzVQc7OrdzSk1GMQMcSUvZ9ub-l-_o0tgiliq0VkvzpLSgOUdzbTsYeC-6SGJXnNye18b-ZZloXsSGCVc-ZveWuGJHLHkppiQHMVmRGwe64ADlhhcnKjf-GGz53uB4yE"
             title="Best Marketing Strategies"
             tag="DesignRush"
+            offset=""
             desc='Global Top 10 Agency'
           />
 

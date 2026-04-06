@@ -8,6 +8,12 @@ const NavBarLink = ({
   ctaDescription = "Get analysis of your digital footprint.",
   ctaLinkText = "Growth Audit",
 }) => {
+  type Service = {
+  icon: string;
+  title: string;
+  description: string;
+};
+
   return (
     <div className="nav-item relative py-2 group">
       
@@ -37,7 +43,7 @@ const NavBarLink = ({
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-              {services.map((service, i) => (
+              {services.map((service:Service, i:number) => (
                 <div
                   key={i}
                   className="group/item flex flex-col gap-3 p-4 rounded-xl border border-transparent hover:border-primary/10 hover:bg-primary/5 transition-all duration-200 cursor-pointer"
