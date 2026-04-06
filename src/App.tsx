@@ -10,7 +10,7 @@ import PageSix from './components/PageSix'
 import AwardsSection from './components/AwardsSection'
 import TestimonialsSection from './components/TestimonialsSection'
 import Footer from './components/layout/Footer'
-import Lenis from "@studio-freight/lenis";
+import Lenis from "lenis";
 import gsap from "gsap";
 
 
