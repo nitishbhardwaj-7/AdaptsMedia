@@ -22,7 +22,9 @@ const LandingPageCarousel = ({ cards }: LandingPageCarouselProps) => {
 
     if (diff === 0) return "card-active";
     if (diff === 1) return "card-next";
+    if (diff === 2) return "card-far-next";
     if (diff === total - 1) return "card-prev";
+    if (diff === total - 2) return "card-far-prev";
     return "card-hidden";
   };
 
@@ -62,51 +64,133 @@ const LandingPageCarousel = ({ cards }: LandingPageCarouselProps) => {
         }
         .card-prev {
           transform: translate3d(-350px, 0, -250px) rotateY(35deg);
-          opacity: 0.5;
-          z-index: 5;
+          opacity: 0.6;
+          z-index: 7;
           pointer-events: none;
         }
         .card-next {
           transform: translate3d(350px, 0, -250px) rotateY(-35deg);
-          opacity: 0.5;
+          opacity: 0.6;
+          z-index: 7;
+          pointer-events: none;
+        }
+        .card-far-prev {
+          transform: translate3d(-620px, 0, -450px) rotateY(45deg);
+          opacity: 0.3;
+          z-index: 5;
+          pointer-events: none;
+        }
+        .card-far-next {
+          transform: translate3d(620px, 0, -450px) rotateY(-45deg);
+          opacity: 0.3;
           z-index: 5;
           pointer-events: none;
         }
         .card-hidden {
-          transform: translate3d(0, 0, -500px) scale(0.5);
+          transform: translate3d(0, 0, -600px) scale(0.4);
           opacity: 0;
           z-index: 0;
           pointer-events: none;
         }
+
+        /* Arrow Button */
+        .arrow-btn {
+          display: block;
+          position: relative;
+          width: 56px;
+          height: 56px;
+          overflow: hidden;
+          background-color: transparent;
+          cursor: pointer;
+          user-select: none;
+          flex-shrink: 0;
+          z-index: 40;
+        }
+        .arrow-btn::before,
+        .arrow-btn::after {
+          content: "";
+          position: absolute;
+          border-radius: 50%;
+          inset: 5px;
+          pointer-events: none;
+        }
+        .arrow-btn::before {
+          border: 4px solid #f0eeef;
+          transition: 0.4s;
+        }
+        .arrow-btn::after {
+          border: 4px solid #0066ff;
+          transform: scale(1.3);
+          opacity: 0;
+          transition: 0.4s;
+        }
+        .arrow-btn:hover::before {
+          opacity: 0;
+          transform: scale(0.7);
+        }
+        .arrow-btn:hover::after {
+          opacity: 1;
+          transform: scale(1);
+        }
+        .arrow-btn-box {
+          display: flex;
+          align-items: center;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          transition: transform 0.4s;
+        }
+        .arrow-btn-elem {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 20px;
+          height: 20px;
+          margin: 0 18px;
+          fill: #000;
+          flex-shrink: 0;
+        }
+        .arrow-btn-elem svg {
+          width: 100%;
+          height: 100%;
+        }
+        .arrow-left .arrow-btn-elem {
+          transform: rotate(180deg);
+        }
+        .arrow-right .arrow-btn-elem {
+          transform: rotate(0deg);
+        }
+        .arrow-btn:hover .arrow-btn-box {
+          transform: translateX(-56px);
+        }
       `}</style>
 
-      <div className="relative flex items-center justify-center">
+      {/* Outer wrapper — relative so arrows can be absolutely positioned */}
+      <div className="relative flex">
 
-        
-      <div
-  className="arrow-btn arrow-left"
-  role="button"
-  tabIndex={0}
-  onClick={prev}
->
-  <div className="arrow-btn-box">
-    
-    <span className="arrow-btn-elem">
-      <svg viewBox="0 0 48 40">
-        <path d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z" />
-      </svg>
-    </span>
+        {/* Prev Arrow — absolutely centered vertically */}
+        <div
+          className="arrow-btn arrow-left absolute left-0 top-[350px] -translate-y-1/2 z-40"
+          role="button"
+          tabIndex={0}
+          onClick={prev}
+        >
+          <div className="arrow-btn-box">
+            <span className="arrow-btn-elem">
+              <svg viewBox="0 0 48 40">
+                <path d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z" />
+              </svg>
+            </span>
+            <span className="arrow-btn-elem">
+              <svg viewBox="0 0 46 40">
+                <path d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z" />
+              </svg>
+            </span>
+          </div>
+        </div>
 
-    <span className="arrow-btn-elem">
-      <svg viewBox="0 0 46 40">
-        <path d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z" />
-      </svg>
-    </span>
-
-  </div>
-</div>
-
-        
+        {/* Carousel */}
         <div className="carousel-container">
           <div className="carousel-stage">
             {cards.map((card, i) => (
@@ -115,7 +199,7 @@ const LandingPageCarousel = ({ cards }: LandingPageCarouselProps) => {
                   className={`glass-card p-12 group transition-all duration-500 flex flex-col justify-between h-full
                     ${card.highlight
                       ? "bg-surface-container-low/50 hover:bg-surface-container-lowest"
-                      : "hover:translate-y-[]"
+                      : ""
                     }
                     hover:shadow-[0px_24px_48px_rgba(28,27,27,0.06)]`}
                 >
@@ -126,17 +210,16 @@ const LandingPageCarousel = ({ cards }: LandingPageCarouselProps) => {
                       </span>
                     </div>
 
-                    <h3 className="font-headline text-3xl font-bold tracking-tight mb-6">
+                    <h3 className="font-headline text-4xl font-bold tracking-tight mb-6">
                       {card.title}
                     </h3>
 
-                    <p className="text-on-surface-variant leading-relaxed">
+                    <p className="text-on-surface-variant text-xl leading-relaxed">
                       {card.desc}
                     </p>
                   </div>
 
                   <div>
-                    
                     <a className="inline-flex items-center gap-2 group/link text-sm font-headline font-extrabold uppercase tracking-widest pt-8 border-t border-outline-variant/10 w-full"
                       href="#">
                       <span className="text-on-surface group-hover/link:text-primary transition-colors">
@@ -153,32 +236,30 @@ const LandingPageCarousel = ({ cards }: LandingPageCarouselProps) => {
           </div>
         </div>
 
-        
-         <div
-  className="arrow-btn arrow-right"
-  role="button"
-  tabIndex={0}
-  onClick={next}
->
-  <div className="arrow-btn-box">
-    
-    <span className="arrow-btn-elem">
-      <svg viewBox="0 0 46 40">
-        <path d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z" />
-      </svg>
-    </span>
+        {/* Next Arrow — absolutely centered vertically */}
+        <div
+          className="arrow-btn arrow-right absolute right-0 top-[350px] -translate-y-1/2 z-100"
+          role="button"
+          tabIndex={0}
+          onClick={next}
+        >
+          <div className="arrow-btn-box">
+            <span className="arrow-btn-elem">
+              <svg viewBox="0 0 46 40">
+                <path d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z" />
+              </svg>
+            </span>
+            <span className="arrow-btn-elem">
+              <svg viewBox="0 0 46 40">
+                <path d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z" />
+              </svg>
+            </span>
+          </div>
+        </div>
 
-    <span className="arrow-btn-elem">
-      <svg viewBox="0 0 46 40">
-        <path d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z" />
-      </svg>
-    </span>
-
-  </div>
-</div>
       </div>
 
-      
+      {/* Dot indicators */}
       <div className="flex justify-center gap-2 mt-8">
         {cards.map((_, i) => (
           <button

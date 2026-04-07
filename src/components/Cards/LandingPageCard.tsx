@@ -14,7 +14,7 @@ const LandingPageCard = ({icon, title, desc, highlight} :{ icon: string; title: 
           </span>
         </div>
 
-        <h3 className="font-headline text-3xl font-bold tracking-tight mb-6">
+        <h3 className="font-headline text-5xl font-bold tracking-tight mb-6">
           {title}
         </h3>
 

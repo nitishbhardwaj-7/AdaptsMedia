@@ -1,4 +1,3 @@
-
 type AvatarProps = {
   src: string;
 };

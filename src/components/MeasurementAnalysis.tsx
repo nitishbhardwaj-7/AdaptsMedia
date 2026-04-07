@@ -1,14 +1,19 @@
-
-
 const logos = [
   "https://img.icons8.com/color/96/salesforce.png",
   "https://img.icons8.com/color/96/zapier.png",
   "https://img.icons8.com/color/96/notion.png",
-  "https://img.icons8.com/color/96/slack-new.png",
-  "https://img.icons8.com/color/96/airtable.png",
+
+  // replaced slack
+  "https://img.icons8.com/color/96/discord-logo.png",
+
+ "https://img.icons8.com/color/96/microsoft.png",
   "https://img.icons8.com/color/96/stripe.png",
-  "https://img.icons8.com/color/96/mailchimp.png",
-  "https://img.icons8.com/color/96/asana.png",
+
+  // replaced mailchimp
+  "https://img.icons8.com/color/96/google-logo.png",
+
+  // replaced asana
+  "https://img.icons8.com/color/96/trello.png",
 ];
 
 const MeasurementAnalytics = () => {

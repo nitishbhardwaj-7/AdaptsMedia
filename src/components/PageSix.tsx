@@ -7,17 +7,7 @@ import MeasurementAnalytics from "./MeasurementAnalysis";
 import CTASection from "./CTASection";
 
 function PageSix() {
-//     const talentLogos = [
-//   {
-//     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
-//   },
-//   {
-//     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg",
-//   },
-//   {
-//     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/instagram/instagram-original.svg",
-//   },
-// ];
+
 
 const platforms = [
   { src: "/src/assets/tik-tok.png", name: "TIKTOK" },
@@ -33,6 +23,7 @@ const platforms = [
 //   "logoB.png",
 //   "logoC.png",
 // ];
+
   return (
     <main className="pb-6 relative overflow-hidden bg-grid">
 

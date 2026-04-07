@@ -30,8 +30,8 @@ const NavBarLink = ({
     <div className="nav-item relative py-2 group">
       
       {/* TITLE (no button) */}
-      <div className="nav-link-3d tracking-wide text-lg text-black hover:text-[#0066ff] border-black pb-1 flex items-center gap-1 cursor-pointer">
-        {title}
+      <div className="nav-link-3d text-black border-black pb-1 flex items-center gap-1 cursor-pointer">
+        <h1 className="text-base font-light tracking-wide hover:text-[#0066ff]">{title}</h1>
 
         {/* Arrow */}
         <span className="material-symbols-outlined text-sm text-[#0066ff] transition-transform duration-300 group-hover:rotate-180">
@@ -60,7 +60,7 @@ const NavBarLink = ({
                   key={i}
                   className="group/item flex flex-col gap-3 p-4 rounded-xl border border-transparent hover:border-primary/10 hover:bg-primary/5 transition-all duration-200 cursor-pointer"
                 >
-                  <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-all duration-200">
+                  <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover/item:bg-[#0066ff] group-hover/item:text-white transition-all duration-200">
                     <span className="material-symbols-outlined text-[18px]">
                       {service.icon}
                     </span>

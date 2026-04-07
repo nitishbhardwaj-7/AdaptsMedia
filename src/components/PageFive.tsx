@@ -20,7 +20,7 @@ function PageFive() {
 <section className="brands-section">
 
       <h2 className="brands-title">
-        Brands We Work <br /> With.
+        Brands We Work With.
       </h2>
 
       <div className="marquee-wrapper">

@@ -36,10 +36,38 @@ const LandingPage = () => {
         <section className="px-8 max-w-screen-2xl mx-auto mt-10">
           <LandingPageCarousel
             cards={[
-              { icon: "hub", title: "Social Hub", desc: "Your description here" },
-              { icon: "groups", title: "Talent Net", desc: "Your description here", highlight: true },
-              { icon: "query_stats", title: "Precision", desc: "Your description here" },
-              { icon: "query_stats", title: "Precision", desc: "Your description here" }
+              { 
+  icon: "hub", 
+  title: "Social Hub", 
+  desc: "Step into a powerful ecosystem where conversations spark ideas, connections turn into collaborations, and communities thrive together in real time." 
+},
+{ 
+  icon: "groups", 
+  title: "Talent Net", 
+  desc: "Unlock access to a dynamic network of creators, innovators, and professionals—designed to help you discover talent, build relationships, and create opportunities that matter.", 
+  highlight: true 
+},
+{ 
+  icon: "query_stats", 
+  title: "Precision", 
+  desc: "Harness advanced analytics and intelligent insights to drive decisions with unmatched accuracy, clarity, and confidence." 
+},
+{ 
+  icon: "rocket_launch", 
+  title: "Growth Engine", 
+  desc: "Fuel your journey with a system engineered for rapid scaling, smarter workflows, and unstoppable momentum toward your goals." 
+},
+{ 
+  icon: "bolt", 
+  title: "Kinetic Speed", 
+  desc: "Experience blazing-fast performance and seamless responsiveness that keeps you ahead, efficient, and always in motion.", 
+  highlight: true 
+},
+{ 
+  icon: "query_stats", 
+  title: "Precision", 
+  desc: "Operate with razor-sharp accuracy powered by real-time data, ensuring every move you make is optimized and effective." 
+}
             ]}
           />
         </section>

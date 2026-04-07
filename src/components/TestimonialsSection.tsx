@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import FAQItem from "./FAQItem";
 import Stat from "./Stat";
 
@@ -261,34 +261,36 @@ function TestimonialsSection() {
   const [fade, setFade] = useState(true);
 
   const [faqIndex, setFaqIndex] = useState(0);
-  const [isFaqHovered, setIsFaqHovered] = useState(false);
   const [faqFade, setFaqFade] = useState(true);
+  const isFaqHoveredRef = useRef(false); // ← ref instead of state
 
-  // Testimonial rotation
+  // Testimonial rotation — unchanged
   useEffect(() => {
     if (isHovered) return;
+    let timeout: ReturnType<typeof setTimeout>;
     const interval = setInterval(() => {
       setFade(false);
-      setTimeout(() => {
+      timeout = setTimeout(() => {
         setIndex((prev) => (prev + 1) % testimonialSets.length);
         setFade(true);
       }, 300);
     }, 3000);
-    return () => clearInterval(interval);
+    return () => { clearInterval(interval); clearTimeout(timeout); };
   }, [isHovered]);
 
-  // FAQ rotation
+  // FAQ rotation — uses ref, never restarts
   useEffect(() => {
-    if (isFaqHovered) return;
+    let timeout: ReturnType<typeof setTimeout>;
     const interval = setInterval(() => {
+      if (isFaqHoveredRef.current) return; // ← skip if hovered, don't restart
       setFaqFade(false);
-      setTimeout(() => {
+      timeout = setTimeout(() => {
         setFaqIndex((prev) => (prev + 1) % faqSets.length);
         setFaqFade(true);
       }, 300);
     }, 3000);
-    return () => clearInterval(interval);
-  }, [isFaqHovered]);
+    return () => { clearInterval(interval); clearTimeout(timeout); };
+  }, []); // ← empty deps, runs once only
 
   const { card1, card2 } = testimonialSets[index];
   const currentFaqs = faqSets[faqIndex];
@@ -437,8 +439,8 @@ function TestimonialsSection() {
 
         <section
           className="max-w-screen-2xl mx-auto px-10 relative z-10"
-          onMouseEnter={() => setIsFaqHovered(true)}
-          onMouseLeave={() => setIsFaqHovered(false)}
+          onMouseEnter={() => { isFaqHoveredRef.current = true; }}
+          onMouseLeave={() => { isFaqHoveredRef.current = false; }}
         >
           {/* Header */}
           <div className="flex items-end justify-between mb-16">

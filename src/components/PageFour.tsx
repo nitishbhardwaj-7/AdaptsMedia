@@ -120,15 +120,9 @@ const PageFour = () => {
 
           <div className="lg:col-span-4">
             <h4 className="text-5xl font-bold mb-6">Global Scale <span className='text-primary italic'>Ready</span></h4>
-            <p className="mb-8 text-lg">
-              Our infrastructure is designed for rapid deployment across diverse regulatory landscapes and cultural paradigms.
-            </p>
-
-            <div className="space-y-4">
-              <div>01 Market Entry Strategy</div>
-              <div>02 Data Velocity Optimization</div>
-              <div>03 Operational Excellence</div>
-            </div>
+            <p className="font-body text-on-surface-variant text-lg leading-relaxed">
+  Built to operate without borders, our platform empowers you to expand seamlessly into new markets while adapting to regional regulations, user behaviors, and evolving business environments without friction or delay.
+</p>
           </div>
 
         </div>
