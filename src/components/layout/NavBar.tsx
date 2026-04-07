@@ -121,7 +121,7 @@ function Navbar() {
           {/* Mobile Logo */}
           <div className="flex md:hidden items-center gap-2 group cursor-pointer">
             <img
-              className="absolute left-4"
+              className="absolute left-2"
               width={80}
               src="https://adaptsmedia.com/wp-content/uploads/2026/01/Adapts-Media-logo.png"
               alt=""
@@ -148,7 +148,7 @@ function Navbar() {
 
           {/* Close button */}
           <button
-            className="absolute top-5 right-6 text-on-surface"
+            className="absolute top-5 right-7 text-on-surface"
             onClick={() => setMobileOpen(false)}
           >
             <span className="material-symbols-outlined text-3xl">close</span>

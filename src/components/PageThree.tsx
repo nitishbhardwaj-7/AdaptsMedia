@@ -3,23 +3,20 @@ function PageThree() {
   return (
     <div
       id="page-3"
-      
-      className="relative h-screen w-full overflow-hidden"
+      className="relative sm:h-screen w-full overflow-hidden"
     >
       {/* Video */}
       <video
-       
-        src="https://www.pexels.com/download/video/6930347/"
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="w-full h-full object-cover"
-      />
+  src="https://www.pexels.com/download/video/6930347/"
+  autoPlay
+  muted
+  loop
+  playsInline
+  className="absolute inset-0 w-full h-full object-contain sm:object-cover object-center"
+/>
 
       {/* Cursor UI */}
       <div
-       
         className="page3-center absolute pointer-events-none text-white"
         style={{
           top: 0,
@@ -28,12 +25,17 @@ function PageThree() {
         }}
       >
         <div className="flex flex-col items-center">
-          <div className="text-8xl">
+          
+          {/* Responsive Icon */}
+          <div className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl">
             <i className="ri-play-fill"></i>
           </div>
-          <h5 className="mt-2 text-lg">
+
+          {/* Responsive Text */}
+          <h5 className="mt-1 sm:mt-2 text-[10px] sm:text-xs md:text-sm lg:text-lg">
             
           </h5>
+
         </div>
       </div>
     </div>

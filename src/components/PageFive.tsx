@@ -1,4 +1,3 @@
-
 import LogoItem from "./LogoItem";
 
 function PageFive() {
@@ -16,36 +15,36 @@ function PageFive() {
 
   return (
 
-    <div className="max-w-screen-2xl mx-auto mb-24">
-<section className="brands-section">
+    <div className="max-w-screen-2xl mx-auto mb-0 sm:mb-20 md:mb-24">
+      <section className="brands-section">
 
-      <h2 className="brands-title">
-        Brands We Work With.
-      </h2>
+        <h2 className="brands-title text-3xl sm:text-4xl md:text-6xl lg:text-7xl">
+          Brands We Work With.
+        </h2>
 
-      <div className="marquee-wrapper">
-        <div className="marquee-track">
+        <div className="marquee-wrapper mt-6 sm:mt-8 md:mt-10 overflow-hidden">
+          <div className="marquee-track flex gap-6 sm:gap-8 md:gap-10">
 
-          {/* loop twice for seamless effect */}
-          {[...logos, ...logos].map((logo, i) => (
-            <LogoItem key={i} src={logo} />
-          ))}
+            {/* loop twice for seamless effect */}
+            {[...logos, ...logos].map((logo, i) => (
+              <LogoItem key={i} src={logo} />
+            ))}
 
+          </div>
         </div>
-      </div>
 
-      {/* Bottom text */}
-      <h1 className="font-headline mt-24 text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.1] tracking-[-0.03em] text-on-surface">
-        Being a <span className="font-extrabold">design studio</span> at the
-        forefront of{" "}
-        <span className="text-primary font-extrabold italic">
-          digital transformation
-        </span>{" "}
-        and product design, we take it upon ourselves to{" "}
-        <span className="font-bold">drop some knowledge</span>, share insights.
-      </h1>
+        {/* Bottom text */}
+        <h1 className="font-headline mt-12 sm:mt-16 md:mt-20 lg:mt-24 text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-[3.5rem] leading-[1.2] md:leading-[1.1] tracking-[-0.02em] md:tracking-[-0.03em] text-on-surface">
+          Being a <span className="font-extrabold">design studio</span> at the
+          forefront of{" "}
+          <span className="text-primary font-extrabold italic">
+            digital transformation
+          </span>{" "}
+          and product design, we take it upon ourselves to{" "}
+          <span className="font-bold">drop some knowledge</span>, share insights.
+        </h1>
 
-    </section>
+      </section>
     </div>
     
   );

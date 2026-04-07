@@ -311,207 +311,181 @@ function TestimonialsSection() {
     <div>
 
       {/* HERO */}
-      <header className="px-10 max-w-screen-2xl mx-auto mb-24 mt-32">
-        <span className="text-xs uppercase text-primary">Digital Proof</span>
-        <h1 className="text-5xl md:text-7xl font-extrabold mt-6">
-          Success Stories from <br /> Our Partners
-        </h1>
-        <p className="mt-6 max-w-xl opacity-70">
-          We build sustainable digital ecosystems through design & strategy.
-        </p>
-      </header>
+<header className="px-10 sm:px-6 md:px-8 lg:px-10 max-w-screen-2xl mx-auto mb-16 sm:mb-20 md:mb-24 mt-20 sm:mt-24 md:mt-32">
+  <span className="text-[10px] sm:text-xs uppercase text-primary">Digital Proof</span>
 
-      {/* TESTIMONIAL GRID */}
-      <section
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        <div className={`px-10 max-w-screen-2xl mx-auto grid md:grid-cols-12 gap-8 transition-opacity duration-300 ${fade ? "opacity-100" : "opacity-0"}`}>
+  <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-extrabold mt-4 sm:mt-6 leading-[1] md:leading-tight">
+    Success Stories from <br /> Our Partners
+  </h1>
 
-          {/* Card 1 */}
-          <div className="md:col-span-7 group">
-            <div className="glass-card p-10 md:p-14 rounded-3xl h-full flex flex-col justify-between hover:-translate-y-2 shadow-2xl hover:shadow-primary/5 transition-all duration-500">
-              <div>
-                <div className="flex justify-between items-start mb-12">
-                  <img alt={card1.logoAlt} className="h-8 opacity-100 transition-all" src={card1.logo} />
-                  <span className="material-symbols-outlined text-primary text-4xl">{card1.icon}</span>
-                </div>
-                <blockquote className="font-headline text-2xl md:text-3xl font-semibold text-on-surface leading-tight mb-10">
-                  <Quote text={card1.quote} />
-                </blockquote>
-              </div>
-              <div className="flex items-end justify-between gap-6 border-t border-outline-variant/20">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full overflow-hidden bg-surface-container-highest">
-                    <img alt={card1.name} className="w-full h-full object-cover" src={card1.avatar} />
-                  </div>
-                  <div>
-                    <p className="font-bold text-on-surface">{card1.name}</p>
-                    <p className="text-sm text-on-surface-variant font-medium">{card1.role}</p>
-                  </div>
-                </div>
-                <div className="text-right">
-                  <p className="text-4xl md:text-5xl font-black font-headline text-primary tracking-tighter">{card1.stat}</p>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mt-1">{card1.statLabel}</p>
-                </div>
-              </div>
+  <p className="mt-4 sm:mt-6 max-w-xl text-xs sm:text-sm md:text-base opacity-70">
+    We build sustainable digital ecosystems through design & strategy.
+  </p>
+</header>
+
+{/* TESTIMONIAL GRID */}
+<section
+  onMouseEnter={() => setIsHovered(true)}
+  onMouseLeave={() => setIsHovered(false)}
+>
+  <div className={`px-4 sm:px-6 md:px-8 lg:px-10 max-w-screen-2xl mx-auto grid md:grid-cols-12 gap-4 sm:gap-6 md:gap-8 transition-opacity duration-300 ${fade ? "opacity-100" : "opacity-0"}`}>
+
+    {/* Card 1 */}
+    <div className="md:col-span-7 group">
+      <div className="glass-card p-6 sm:p-8 md:p-12 lg:p-14 rounded-2xl sm:rounded-3xl h-full flex flex-col justify-between hover:-translate-y-2 shadow-xl sm:shadow-2xl transition-all duration-500">
+
+        <div>
+          <div className="flex justify-between items-start mb-6 sm:mb-8 md:mb-12">
+            <img alt={card1.logoAlt} className="h-6 sm:h-7 md:h-8" src={card1.logo} />
+            <span className="material-symbols-outlined text-primary text-2xl sm:text-3xl md:text-4xl">
+              {card1.icon}
+            </span>
+          </div>
+
+          <blockquote className="font-headline text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-tight mb-6 sm:mb-8 md:mb-10">
+            <Quote text={card1.quote} />
+          </blockquote>
+        </div>
+
+        <div className="flex items-end justify-between gap-4 sm:gap-6 border-t border-outline-variant/20 pt-4">
+          <div className="flex items-center gap-3 sm:gap-4">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden">
+              <img alt={card1.name} className="w-full h-full object-cover" src={card1.avatar} />
+            </div>
+            <div>
+              <p className="font-bold text-sm sm:text-base">{card1.name}</p>
+              <p className="text-xs sm:text-sm opacity-70">{card1.role}</p>
             </div>
           </div>
 
-          {/* Card 2 */}
-          <div className="md:col-span-5 group">
-            <div className="glass-card p-10 md:p-12 rounded-3xl h-full flex flex-col justify-between bg-white/40 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500">
+          <div className="text-right">
+            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary">
+              {card1.stat}
+            </p>
+            <p className="text-[9px] sm:text-[10px] uppercase mt-1 opacity-70">
+              {card1.statLabel}
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    {/* Card 2 */}
+    <div className="md:col-span-5 group">
+      <div className="glass-card p-6 sm:p-8 md:p-10 lg:p-12 rounded-2xl sm:rounded-3xl h-full flex flex-col justify-between">
+
+        <div>
+          <div className="flex justify-between items-start mb-6 sm:mb-8 md:mb-12">
+            <img alt={card2.logoAlt} className="h-5 sm:h-6" src={card2.logo} />
+            <span className="material-symbols-outlined text-primary text-2xl sm:text-3xl md:text-4xl">
+              {card2.icon}
+            </span>
+          </div>
+
+          <blockquote className="font-headline text-base sm:text-lg md:text-xl lg:text-2xl font-semibold leading-tight mb-6 sm:mb-8 md:mb-12">
+            <Quote text={card2.quote} />
+          </blockquote>
+        </div>
+
+        <div className="space-y-4 sm:space-y-6">
+          <div className="bg-surface-container-lowest p-4 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl">
+            <div className="flex justify-between items-end">
               <div>
-                <div className="flex justify-between items-start mb-12">
-                  <img alt={card2.logoAlt} className="h-6 opacity-100 transition-all" src={card2.logo} />
-                  <span className="material-symbols-outlined text-primary text-4xl">{card2.icon}</span>
-                </div>
-                <blockquote className="font-headline text-xl md:text-2xl font-semibold text-on-surface leading-tight mb-12">
-                  <Quote text={card2.quote} />
-                </blockquote>
+                <p className="text-[9px] sm:text-[10px] uppercase opacity-70 mb-1">
+                  {card2.statLabel}
+                </p>
+                <p className="text-xl sm:text-2xl md:text-3xl font-black">
+                  {card2.stat}
+                </p>
               </div>
-              <div className="space-y-6">
-                <div className="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/10">
-                  <div className="flex justify-between items-end">
-                    <div>
-                      <p className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-1">{card2.statLabel}</p>
-                      <p className="font-headline text-3xl font-black text-on-surface">{card2.stat}</p>
-                    </div>
-                    <span className="material-symbols-outlined text-primary">trending_up</span>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full overflow-hidden bg-surface-container-highest">
-                    <img alt={card2.name} className="w-full h-full object-cover" src={card2.avatar} />
-                  </div>
-                  <div>
-                    <p className="font-bold text-on-surface">{card2.name}</p>
-                    <p className="text-sm text-on-surface-variant font-medium">{card2.role}</p>
-                  </div>
-                </div>
-              </div>
+              <span className="material-symbols-outlined text-primary text-sm sm:text-base">
+                trending_up
+              </span>
             </div>
           </div>
 
+          <div className="flex items-center gap-3 sm:gap-4">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden">
+              <img alt={card2.name} className="w-full h-full object-cover" src={card2.avatar} />
+            </div>
+            <div>
+              <p className="font-bold text-sm sm:text-base">{card2.name}</p>
+              <p className="text-xs sm:text-sm opacity-70">{card2.role}</p>
+            </div>
+          </div>
         </div>
 
-        {/* Testimonial dot indicators */}
-        <div className="flex justify-center gap-2 mt-8">
-          {testimonialSets.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => goTo(i)}
-              className={`h-2 rounded-full transition-all duration-300 ${i === index ? "bg-primary w-6" : "bg-primary/30 w-2"}`}
-            />
-          ))}
-        </div>
-      </section>
+      </div>
+    </div>
 
-      {/* STATS */}
-      <div className="px-10 max-w-screen-2xl mx-auto mt-24 grid md:grid-cols-4 gap-6">
-        <Stat number="200+" label="Partnerships" />
-        <Stat number="12" label="Awards" />
-        <Stat number="$4B" label="Revenue" />
-        <Stat number="100%" label="Transparency" />
+  </div>
+
+  {/* dots */}
+  <div className="flex justify-center gap-2 mt-6 sm:mt-8">
+    {testimonialSets.map((_, i) => (
+      <button
+        key={i}
+        onClick={() => goTo(i)}
+        className={`h-2 rounded-full transition-all duration-300 ${i === index ? "bg-primary w-6" : "bg-primary/30 w-2"}`}
+      />
+    ))}
+  </div>
+</section>
+
+{/* STATS */}
+<div className="px-4 sm:px-6 md:px-8 lg:px-10 max-w-screen-2xl mx-auto mt-16 sm:mt-20 md:mt-24 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+  <Stat number="200+" label="Partnerships" />
+  <Stat number="12" label="Awards" />
+  <Stat number="$4B" label="Revenue" />
+  <Stat number="100%" label="Transparency" />
+</div>
+
+{/* CTA */}
+<section className="px-4 sm:px-6 md:px-8 lg:px-10 max-w-screen-2xl mx-auto mt-20 sm:mt-24 md:mt-32 text-center">
+  <div className="bg-primary-container p-8 sm:p-12 md:p-16 lg:p-24 rounded-[2rem] sm:rounded-[2.5rem] md:rounded-[3rem]">
+    <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-extrabold text-white mb-6 sm:mb-8 md:mb-10">
+      Ready to become the next success story?
+    </h2>
+
+    <div className="flex flex-col md:flex-row justify-center items-center gap-4 sm:gap-6">
+      <button className="bg-white text-primary px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-5 rounded-full font-bold text-sm sm:text-base md:text-lg">
+        Start Your Journey
+      </button>
+      <button className="text-white border-b-2 border-white/30 px-4 sm:px-6 py-2 text-sm sm:text-base">
+        View All Case Studies
+      </button>
+    </div>
+  </div>
+</section>
+
+{/* FAQ */}
+<main className="relative pt-20 sm:pt-24 md:pt-32 pb-16 sm:pb-20 md:pb-24 overflow-hidden">
+  <section className="max-w-screen-2xl mx-auto px-10 sm:px-6 md:px-8 lg:px-10">
+
+    <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-10 sm:mb-12 md:mb-16">
+      <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-extrabold leading-tight">
+        Frequently Asked <br />
+        <span className="text-primary italic">Questions</span>
+      </h1>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+      <div className="space-y-4 sm:space-y-6">
+        {col1Faqs.map((faq, i) => (
+          <FAQItem key={i} {...faq} />
+        ))}
       </div>
 
-      {/* CTA */}
-      <section className="px-10 max-w-screen-2xl mx-auto mt-32 text-center">
-        <div className="bg-primary-container p-16 md:p-24 rounded-[3rem] relative overflow-hidden group">
-          <div className="absolute -right-20 -top-20 w-96 h-96 bg-white/10 rounded-full blur-3xl group-hover:scale-150 transition-all duration-700"></div>
-          <h2 className="font-headline text-4xl md:text-6xl font-extrabold text-white tracking-tighter mb-10 relative z-10">
-            Ready to become the next success story?
-          </h2>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-6 relative z-10">
-            <button className="bg-white text-primary px-12 py-5 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl">
-              Start Your Journey
-            </button>
-            <button className="text-white border-b-2 border-white/30 px-6 py-2 font-bold hover:border-white transition-all">
-              View All Case Studies
-            </button>
-          </div>
-        </div>
-      </section>
+      <div className="space-y-4 sm:space-y-6">
+        {col2Faqs.map((faq, i) => (
+          <FAQItem key={i} {...faq} />
+        ))}
+      </div>
+    </div>
 
-      {/* FAQ */}
-      <main className="relative pt-32 pb-24 overflow-hidden">
-        <div className="absolute inset-0 geometric-grid opacity-30 pointer-events-none"></div>
-
-        <section
-          className="max-w-screen-2xl mx-auto px-10 relative z-10"
-          onMouseEnter={() => { isFaqHoveredRef.current = true; }}
-          onMouseLeave={() => { isFaqHoveredRef.current = false; }}
-        >
-          {/* Header */}
-          <div className="flex items-end justify-between mb-16">
-            <h1 className="text-5xl md:text-7xl font-headline font-extrabold tracking-tighter leading-tight text-on-surface">
-              Frequently Asked <br />
-              <span className="text-primary italic">Questions</span>
-            </h1>
-
-            {/* FAQ dot indicators */}
-            <div className="flex gap-2 mb-3">
-              {faqSets.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => goToFaq(i)}
-                  className={`h-2 rounded-full transition-all duration-300 ${i === faqIndex ? "bg-primary w-6" : "bg-primary/30 w-2"}`}
-                />
-              ))}
-            </div>
-          </div>
-
-          {/* FAQ Grid with fade */}
-          <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 transition-opacity duration-300 ${faqFade ? "opacity-100" : "opacity-0"}`}>
-
-            {/* Column 1 */}
-            <div className="space-y-6">
-              {col1Faqs.map((faq, i) => (
-                <FAQItem
-                  key={`faq-${faqIndex}-col1-${i}`}
-                  question={faq.question}
-                  answer={faq.answer}
-                  defaultOpen={faq.defaultOpen}
-                />
-              ))}
-            </div>
-
-            {/* Column 2 */}
-            <div className="space-y-6">
-              {col2Faqs.map((faq, i) => (
-                <FAQItem
-                  key={`faq-${faqIndex}-col2-${i}`}
-                  question={faq.question}
-                  answer={faq.answer}
-                  defaultOpen={faq.defaultOpen}
-                />
-              ))}
-            </div>
-
-          </div>
-
-          {/* CTA */}
-          <div className="mt-24 p-12 bg-primary-container rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 border border-primary/5">
-            <div className="max-w-lg">
-              <h2 className="text-3xl font-headline text-white font-bold tracking-tight mb-4">
-                Still have questions?
-              </h2>
-              <p className="text-on-surface-variant font-body text-white">
-                Our strategy leads are ready to discuss your specific growth challenges and help you map out a kinetic path forward.
-              </p>
-            </div>
-            <div className="flex gap-4">
-              <button className="bg-[#0066ff] text-on-primary px-8 py-4 rounded-full font-bold hover:shadow-[0_0_20px_rgba(0,80,203,0.3)] transition-all">
-                Schedule a Call
-              </button>
-              <button className="bg-white text-on-surface px-8 py-4 rounded-full font-bold transition-colors">
-                Email Us
-              </button>
-            </div>
-          </div>
-
-        </section>
-      </main>
+  </section>
+</main>
 
     </div>
   );
