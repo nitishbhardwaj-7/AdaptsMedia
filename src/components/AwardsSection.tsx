@@ -63,7 +63,7 @@ function AwardsSection() {
             <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold mb-2 sm:mb-3 md:mb-4">
               Industry Recognition
             </h2>
-            <p className="opacity-70 max-w-xl text-sm sm:text-base">
+            <p className="font-body text-on-surface-variant md:text-lg lg:text-xl leading-relaxed opacity-70 max-w-xl text-sm sm:text-base">
               Recognized by leading platforms globally.
             </p>
           </div>
@@ -123,7 +123,7 @@ function AwardsSection() {
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">
                 SOTD Honorable Mention
               </h3>
-              <p className="opacity-70 mb-4 text-sm sm:text-base">
+              <p className="font-body text-on-surface-variant leading-relaxed opacity-70 mb-4 text-sm sm:text-base">
                 Awarded for digital craftsmanship.
               </p>
               <a className="text-primary font-bold text-sm sm:text-base">View Project →</a>
@@ -136,7 +136,7 @@ function AwardsSection() {
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">
                 SOTD Honorable Mention
               </h3>
-              <p className="opacity-70 mb-4 text-sm sm:text-base">
+              <p className="font-body text-on-surface-variant leading-relaxed opacity-70 mb-4 text-sm sm:text-base">
                 Awarded for digital craftsmanship.
               </p>
               <a className="text-primary font-bold text-sm sm:text-base">View Project →</a>

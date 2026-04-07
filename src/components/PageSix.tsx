@@ -37,7 +37,7 @@ const platforms = [
           </div>
 
           <div className="lg:col-span-4">
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl opacity-70">
+            <p className="font-body text-on-surface-variant text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed opacity-70">
               We operate at the intersection of talent, technology, and media.
             </p>
           </div>
@@ -53,7 +53,7 @@ const platforms = [
               SOCIAL MEDIA
             </h2>
 
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg opacity-70 mb-6 sm:mb-8">
+            <p className="font-body text-on-surface-variant leading-relaxed text-xs sm:text-sm md:text-base lg:text-lg opacity-70 mb-6 sm:mb-8">
               Backed by strategic partnerships with leading global platforms, we craft data-driven social media ecosystems that amplify reach, accelerate engagement, and convert attention into scalable revenue. From paid acquisition to organic storytelling, every interaction is engineered for performance.
             </p>
 

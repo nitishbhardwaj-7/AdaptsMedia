@@ -318,7 +318,7 @@ function TestimonialsSection() {
     Success Stories from <br /> Our Partners
   </h1>
 
-  <p className="mt-4 sm:mt-6 max-w-xl text-xs sm:text-sm md:text-base opacity-70">
+  <p className="font-body text-on-surface-variant leading-relaxed mt-4 sm:mt-6 max-w-xl text-xs sm:text-sm md:text-lg opacity-70">
     We build sustainable digital ecosystems through design & strategy.
   </p>
 </header>

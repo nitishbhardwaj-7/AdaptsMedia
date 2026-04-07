@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="w-full pt-16 sm:pt-20 md:pt-24 pb-8 sm:pb-10 md:pb-12 bg-[#1c1b1b] text-white text-center">
+    <footer className="w-full pt-16 sm:pt-20 md:pt-24 pb-8 sm:pb-10 md:pb-12 bg-[#1c1b1b] text-white text-center md:text-left lg:text-left">
       <div className="px-4 sm:px-6 md:px-8 lg:px-10 max-w-screen-2xl mx-auto">
 
         {/* Footer Branding & Main Grid */}

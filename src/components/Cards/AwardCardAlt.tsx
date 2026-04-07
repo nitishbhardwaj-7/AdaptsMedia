@@ -20,7 +20,7 @@ function AwardCardAlt({ img, title, tag, desc, badge, offset } : { img: string; 
 
       {/* Description */}
       {desc && (
-        <p className="text-sm text-on-surface-variant leading-snug">
+        <p className="font-body text-on-surface-variant text-sm text-on-surface-variant leading-snug">
           {desc}
         </p>
       )}
