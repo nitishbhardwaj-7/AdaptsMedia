@@ -14,7 +14,7 @@ const PageTwo = () => {
       <div className="max-w-[1440px] mx-auto">
 
         {/* Top Label */}
-        <div className="flex items-center gap-4 mb-8 mt-20">
+        <div className="flex items-center p-2 md:p-0 gap-4 mb-8 mt-20">
           <span className="inline-flex items-center px-4 py-1 rounded-full bg-surface-container-highest text-primary font-label text-[10px] tracking-widest uppercase font-bold">
             <span className="w-1.5 h-1.5 bg-primary rounded-full mr-2" />
             Knowledge Hub
@@ -26,11 +26,11 @@ const PageTwo = () => {
         </div>
 
         {/* Main Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 p-2 md:p-0 gap-16 lg:gap-24 items-start">
 
           {/* Left Column */}
           <div className="lg:col-span-6 sticky top-40">
-            <h1 className="font-headline text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.1] tracking-[-0.03em] text-on-surface">
+            <h1 className="font-headline text-3xl md:text-5xl lg:text-[3.5rem] leading-[1.1] tracking-[-0.03em] text-on-surface">
               Being a <span className="font-extrabold">design studio</span> at
               the forefront of{" "}
               <span className="text-primary font-extrabold italic">

@@ -96,6 +96,7 @@ const LandingPageCarousel = ({ cards }: LandingPageCarouselProps) => {
         @media (max-width: 768px) {
           .carousel-container {
             height: 480px;
+            transform: translateX(-17px);
           }
           .carousel-stage {
             width: 280px;
@@ -127,6 +128,7 @@ const LandingPageCarousel = ({ cards }: LandingPageCarouselProps) => {
           user-select: none;
           flex-shrink: 0;
           z-index: 40;
+          transform: translateX(-17px);
         }
         .arrow-btn::before,
         .arrow-btn::after {
