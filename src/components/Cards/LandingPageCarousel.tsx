@@ -93,6 +93,28 @@ const LandingPageCarousel = ({ cards }: LandingPageCarouselProps) => {
           pointer-events: none;
         }
 
+        @media (max-width: 768px) {
+          .carousel-container {
+            height: 480px;
+          }
+          .carousel-stage {
+            width: 280px;
+            height: 420px;
+          }
+          .card-prev {
+            transform: translate3d(-180px, 0, -200px) rotateY(35deg);
+          }
+          .card-next {
+            transform: translate3d(180px, 0, -200px) rotateY(-35deg);
+          }
+          .card-far-prev {
+            transform: translate3d(-300px, 0, -350px) rotateY(45deg);
+          }
+          .card-far-next {
+            transform: translate3d(300px, 0, -350px) rotateY(-45deg);
+          }
+        }
+
         /* Arrow Button */
         .arrow-btn {
           display: block;
@@ -164,14 +186,29 @@ const LandingPageCarousel = ({ cards }: LandingPageCarouselProps) => {
         .arrow-btn:hover .arrow-btn-box {
           transform: translateX(-56px);
         }
+
+        @media (max-width: 768px) {
+          .arrow-btn {
+            width: 40px;
+            height: 40px;
+          }
+          .arrow-btn-elem {
+            width: 14px;
+            height: 14px;
+            margin: 0 13px;
+          }
+          .arrow-btn:hover .arrow-btn-box {
+            transform: translateX(-40px);
+          }
+        }
       `}</style>
 
-      {/* Outer wrapper — relative so arrows can be absolutely positioned */}
+      {/* Outer wrapper */}
       <div className="relative flex">
 
-        {/* Prev Arrow — absolutely centered vertically */}
+        {/* Prev Arrow */}
         <div
-          className="arrow-btn arrow-left absolute left-0 top-[350px] -translate-y-1/2 z-40"
+          className="arrow-btn arrow-left absolute left-0 top-[240px] md:top-[350px] -translate-y-1/2 z-40"
           role="button"
           tabIndex={0}
           onClick={prev}
@@ -196,7 +233,7 @@ const LandingPageCarousel = ({ cards }: LandingPageCarouselProps) => {
             {cards.map((card, i) => (
               <div key={i} className={`carousel-card-wrap shadow-2xl ${getCardClass(i)}`}>
                 <div
-                  className={`glass-card p-12 group transition-all duration-500 flex flex-col justify-between h-full
+                  className={`glass-card p-6 md:p-12 group transition-all duration-500 flex flex-col justify-between h-full
                     ${card.highlight
                       ? "bg-surface-container-low/50 hover:bg-surface-container-lowest"
                       : ""
@@ -204,23 +241,25 @@ const LandingPageCarousel = ({ cards }: LandingPageCarouselProps) => {
                     hover:shadow-[0px_24px_48px_rgba(28,27,27,0.06)]`}
                 >
                   <div>
-                    <div className="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center mb-12 group-hover:bg-primary transition-colors duration-500">
-                      <span className="material-symbols-outlined text-3xl group-hover:text-on-primary transition-colors duration-500">
+                    <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-surface-container-low flex items-center justify-center mb-6 md:mb-12 group-hover:bg-primary transition-colors duration-500">
+                      <span className="material-symbols-outlined text-2xl md:text-3xl group-hover:text-on-primary transition-colors duration-500">
                         {card.icon}
                       </span>
                     </div>
 
-                    <h3 className="font-headline text-4xl font-bold tracking-tight mb-6">
+                    <h3 className="font-headline text-2xl md:text-4xl font-bold tracking-tight mb-4 md:mb-6">
                       {card.title}
                     </h3>
 
-                    <p className="text-on-surface-variant text-xl leading-relaxed">
+                    <p className="text-on-surface-variant text-base md:text-xl leading-relaxed">
                       {card.desc}
                     </p>
                   </div>
 
                   <div>
-                    <a className="inline-flex items-center gap-2 group/link text-sm font-headline font-extrabold uppercase tracking-widest pt-8 border-t border-outline-variant/10 w-full"
+                    
+                      
+                    <a className="inline-flex items-center gap-2 group/link text-sm font-headline font-extrabold uppercase tracking-widest pt-6 md:pt-8 border-t border-outline-variant/10 w-full"
                       href="#">
                       <span className="text-on-surface group-hover/link:text-primary transition-colors">
                         Learn more
@@ -236,9 +275,9 @@ const LandingPageCarousel = ({ cards }: LandingPageCarouselProps) => {
           </div>
         </div>
 
-        {/* Next Arrow — absolutely centered vertically */}
+        {/* Next Arrow */}
         <div
-          className="arrow-btn arrow-right absolute right-0 top-[350px] -translate-y-1/2 z-100"
+          className="arrow-btn arrow-right absolute right-0 top-[240px] md:top-[350px] -translate-y-1/2 z-[100]"
           role="button"
           tabIndex={0}
           onClick={next}

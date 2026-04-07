@@ -31,7 +31,7 @@ useEffect(() => {
 
 
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <nav className="px-6 max-w-screen-2xl mx-auto">
         <Navbar/>
       </nav>
