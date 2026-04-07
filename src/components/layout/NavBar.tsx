@@ -12,7 +12,7 @@ function Navbar() {
         <div className="flex justify-between items-center w-full font-headline tracking-tight text-on-surface px-2 h-16 md:h-auto max-w-screen-2xl mx-auto">
 
           {/* Logo */}
-          <div className="flex items-center gap-2 group cursor-pointer">
+          <div className="hidden md:flex items-center gap-2 group cursor-pointer">
             <img
               className="absolute"
               width={100}
@@ -116,6 +116,16 @@ function Navbar() {
               <span className="circle"><span className="icon arrow"></span></span>
               <span className="button-text">Learn More</span>
             </button>
+          </div>
+
+          {/* Mobile Logo */}
+          <div className="flex md:hidden items-center gap-2 group cursor-pointer">
+            <img
+              className="absolute left-4"
+              width={80}
+              src="https://adaptsmedia.com/wp-content/uploads/2026/01/Adapts-Media-logo.png"
+              alt=""
+            />
           </div>
 
           {/* Mobile: Hamburger */}
